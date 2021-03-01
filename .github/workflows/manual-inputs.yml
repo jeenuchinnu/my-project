@@ -1,13 +1,13 @@
 name: manualt trigger with input params
-on: push
-#   workflow_dispatch:
-#     inputs:
-#       logLevel:
-#         description: 'Log level'     
-#         required: true
-#         default: 'warning'
-#       tags:
-#         description: 'Test scenario tags'
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
 jobs:
   printInputs:
     runs-on: ubuntu-latest
