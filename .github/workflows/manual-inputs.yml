@@ -1,4 +1,6 @@
-name: manualt trigger with input params
+# This is a basic workflow to show the manual trigger
+name: Manual-Actions-Workflow
+
 on: 
   workflow_dispatch:
     inputs:
@@ -8,10 +10,18 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'
+
 jobs:
-  printInputs:
+ 
+  build:
     runs-on: ubuntu-latest
+
     steps:
+    - uses: actions/checkout@v2
+
+    - name: Say something
+      run: echo "Hi, I have been manually triggered!"
+    
     - run: |
         echo "Log level: ${{ github.event.inputs.logLevel }}"
         echo "Tags: ${{ github.event.inputs.tags }}"
