@@ -27,9 +27,15 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-
+      
+#     - name: Build and push Docker image
+#       uses: docker/build-push-action@v2
+#       with:
+#         context: .
+#         push: true
+#         tags: tenjaa/concourse-github-app-token:${{ github.sha }}
     - name: Build and Push Docker Image
-      uses: docker/build-push-action@v2.3.0
+      uses: docker/build-push-action@v2
       with:
         image: chinnudocker555/test
         registry: docker.io
