@@ -27,7 +27,11 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-   
+    
+    - name: view contents in workspace
+      run: |
+            cd ${GITHUB_WORKSPACE}
+            ls -ltr
 #     - name: Build and push Docker image
 #       uses: docker/build-push-action@v2
 #       with:
