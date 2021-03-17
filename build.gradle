@@ -4,6 +4,11 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 }
 
+jar {
+    baseName = my-app-1.0-SNAPSHOT.jar
+    enabled=true
+}
+
 group 'com.example'
 version '1.0-SNAPSHOT'
 
