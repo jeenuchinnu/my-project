@@ -30,7 +30,7 @@ jobs:
     
     - name: view contents in workspace
       run: |
-            cd ${GITHUB_WORKSPACE}
+            cd ${GITHUB_WORKSPACE}/build
             ls -ltr
 #     - name: Build and push Docker image
 #       uses: docker/build-push-action@v2
