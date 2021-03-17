@@ -5,7 +5,6 @@ plugins {
 }
 
 jar {
-    baseName = my-app-1.0-SNAPSHOT.jar
     enabled=true
 }
 
